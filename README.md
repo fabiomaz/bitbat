@@ -4,7 +4,7 @@
 
 E se fossi un pipistrello? Bit Bat è la prima avventura di eco-localizzazione che ti permette di entrare nei panni di un vero mammifero placentato (si, i pipistrelli sono mammiferi!) fatto di pixel.
 L'obiettivo è usare il proprio biosonar per trovare le piattaforme di appoggio ed uscire dalla caverna.
-I barbagianni saranno attratti dal sonar e lo sfrutteranno contro di te per venire a mangiarti!.
+I barbagianni saranno attratti dal sonar e lo sfrutteranno contro di te per venire a mangiarti!
 
 Mangia le falene per aumentare la portata del tuo biosonar!
 
@@ -53,3 +53,5 @@ Il progetto segue i principi SOLID e la separazione dei concetti, dividendo la l
 1. Clona il repository:
    ```bash
    git clone [https://github.com/fabiomaz/bitbat.git](https://github.com/fabiomaz/bitbat.git)
+
+2. Apri il file index.html in un qualsiasi browser moderno, oppure utilizza un server locale come Live Server su VS Code per goderti l'esperienza di gioco.
