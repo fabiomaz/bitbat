@@ -1,0 +1,168 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: 'Courier New', Courier, monospace;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#game-container {
+	position: relative;
+	border: 4px solid #333;
+	box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+canvas {
+	max-width: 100%;
+    max-height: 80vh; /* Lascia spazio ai controlli sotto */
+    height: auto;
+}
+
+#mobile-controls {
+    display: none; /* Nascosti di default su PC */
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.touch-btn {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #00ffff;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    user-select: none; /* Impedisce la selezione del testo */
+    touch-action: manipulation; /* Velocizza il tocco */
+}
+
+/* Mostra i controlli solo su dispositivi touch/piccoli */
+@media (max-width: 900px) {
+    #mobile-controls {
+        display: flex;
+    }
+}
+
+#ui-layer {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	pointer-events: none;
+	display: flex;
+	justify-content: space-between;
+	text-shadow: 2px 2px #000;
+	z-index: 5;
+}
+
+.stat-box {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 5px 10px;
+	border-radius: 4px;
+}
+
+#stamina-bar-container {
+	width: 100px;
+	height: 10px;
+	background: #333;
+	border: 1px solid #fff;
+	margin-top: 5px;
+}
+
+#stamina-bar {
+	width: 100%;
+	height: 100%;
+	background: #00ffff;
+	transition: width 0.1s;
+}
+
+#lives-container {
+	color: #ff4757;
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+#score-display {
+	color: #f1c40f;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* lascia un buco al centro per non coprire il pipistrello */
+	background: radial-gradient(circle at 50% 85%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.9) 80%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	z-index: 10;
+	padding-bottom: 100px;
+	box-sizing: border-box;
+}
+
+.game-stats{
+	font-family: "Tiny5", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 1em;
+}
+
+h1 {
+	font-family: "Jacquard 24", system-ui;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 6em;
+	margin: 0;
+	letter-spacing: 10px;
+	color: #fff;
+	text-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+h5{
+	font-family: "Tiny5", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1em;
+}
+
+p {
+	max-width: 80%;
+	line-height: 1.6;
+	background: rgba(0,0,0,0.5);
+	padding: 15px;
+	border-radius: 8px;
+}
+
+button {
+	background: #00ffff;
+	border: none;
+	padding: 15px 40px;
+	font-family: "Jersey 15", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.5 em;
+	cursor: pointer;
+	margin-top: 20px;
+	box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+	transition: all 0.2s;
+}
+
+button:hover {
+	background: #fff;
+	transform: scale(1.1);
+	box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}

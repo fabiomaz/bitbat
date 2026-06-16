@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>BitBat - Echolocation Adventure</title>
+	    <link href="css/style.css" rel="stylesheet" id="css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Jersey+15&family=Tiny5&display=swap" rel="stylesheet">
+		<script src="js/Player.js"></script>
+		<script src="js/Insect.js"></script>
+		<script src="js/Drone.js"></script>
+		<script src="js/Platform.js"></script>
+		<script src="js/FloatingText.js"></script>
+	</head>
+	<body>
+		
+		<div id="game-container">
+			<div id="ui-layer">
+				<div class="stat-box">
+					<span class="game-stats">LIVELLO:</span> <span id="level-display">1</span><br>
+					<span class="game-stats">VITE:</span> <span id="lives-container"></span><br>
+					<span class="game-stats">PUNTI:</span> <span id="score-display">0</span>
+				</div>
+				<div class="stat-box">
+					<span class="game-stats">
+						SONAR (SPAZIO)
+					</span>
+					<div id="stamina-bar-container">
+						<div id="stamina-bar"></div>
+					</div>
+				</div>
+			</div>
+			<canvas id="gameCanvas"></canvas>
+			<div id="mobile-controls">
+				<div class="control-group">
+					<button id="btn-left" class="touch-btn">◀</button>
+					<button id="btn-right" class="touch-btn">▶</button>
+				</div>
+				<div class="control-group">
+					<button id="btn-jump" class="touch-btn">SALTA</button>
+					<button id="btn-sonar" class="touch-btn">SONAR</button>
+				</div>
+			</div>
+			<div id="overlay">
+				<h1 id="overlay-title">Bit Bat</h1>
+				<h5 id="overlay-desc">Usa le FRECCE per muoverti e saltare.
+					<br>Puoi fare fino a 3 salti di fila!
+					<br>Usa SPAZIO per il sonar 
+					<br>Trova l'insetto per potenziare il Sonar!
+				</h5>
+				<button id="start-btn">INIZIA GIOCO</button>
+			</div>
+		</div>
+		
+	</body>
+    <script src="js/Main.js"></script>
+</html>
