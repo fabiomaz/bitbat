@@ -1,5 +1,7 @@
 # BitBat - Echolocation Adventure
 
+[CLICCA QUI PER GIOCARE DIRETTAMENTE DAL TUO BROWSER](https://fabiomaz.github.io/bitbat/)
+
 **BitBat** è un videogame arcade platform 2D sviluppato interamente in **Vanilla JavaScript** ed eseguito su **HTML5 Canvas**.
 
 E se fossi un pipistrello? Bit Bat è la prima avventura di eco-localizzazione che ti permette di entrare nei panni di un vero mammifero placentato (si, i pipistrelli sono mammiferi!) fatto di pixel.
